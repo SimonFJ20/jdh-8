@@ -34,7 +34,7 @@ A: ADC* reg, imm8/reg   -> reg = reg + imm8/reg + c
 B: AND  reg, imm8/reg   -> reg = reg & imm8/reg
 C: OR   reg, imm8/reg   -> reg = reg | imm8/reg
 D: NOR  reg, imm8/reg   -> reg = ~(reg | imm8/reg)
-E: CMP* reg, imm8/reg   -> reg = reg + imm8/reg
+E: CMP* reg, imm8/reg   -> f = compare reg, imm8/reg (see below)
 F: SBB* reg, imm8/reg   -> reg = reg - imm8/reg - b
 
 *these instructions load the carry/borrow bits in the (F)lags register
@@ -57,6 +57,9 @@ F (7): flags (LSB to MSB)
 ```
 
 See [the spec](SPEC.txt) for more information.
+
+## Schematic
+The schematic requires a modified version of Logisim Evolution to view, [see here](https://github.com/jdah/logisim-evolution). You will need to build it from source.
 
 ## Toolchain
 
